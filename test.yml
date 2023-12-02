@@ -1,0 +1,34 @@
+---
+- hosts: all
+  become: true
+  pre_tasks:
+
+#  - name: try modify
+#    ini_file:
+#      dest: /home/chrysler/test.conf
+#      section: section2
+#      option: option2
+#      value: "WWWWWWWWWWWWWWWWWWWWW"
+#      create: yes
+#      state: present
+
+  - name: try modify 2
+    lineinfile:
+      path: /home/chrysler/test.conf
+      regexp: '^option2 = '
+      state: absent
+      insertafter: '^\[section2\]'
+
+  - name: try modify 3
+    lineinfile:
+      path: /home/chrysler/test.conf
+      line: 'option2 = new option2'
+      state: present
+      insertafter: '^\[section2\]'
+
+  - name: try modify 4
+    lineinfile:
+      path: /home/chrysler/test.conf
+      line: 'option3 = second option3'
+      state: present
+      insertafter: '^\[section2\]'

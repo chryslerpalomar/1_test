@@ -1,0 +1,22 @@
+# school
+#192.168.56.109 server1
+#192.168.56.108 server2
+#192.168.56.111 centos
+
+#192.168.56.108 ansible_python_interpreter=/usr/bin/python3
+#192.168.56.109 ansible_python_interpreter=/usr/bin/python3
+#192.168.56.111 ansible_python_interpreter=/usr/bin/python
+
+#-------------------------------------------------------------------
+# home
+#192.168.56.105 server1
+#192.168.56.106 server2
+#192.168.56.107 centos
+
+#[remote_servers]
+192.168.56.109 #ansible_python_interpreter=/usr/bin/python3
+#192.168.56.110 #ansible_python_interpreter=/usr/bin/python
+
+#192.168.56.106 ansible_python_interpreter=/usr/bin/python3
+#192.168.56.105 ansible_python_interpreter=/usr/bin/python3
+#192.168.56.107 ansible_python_interpreter=/usr/bin/python
